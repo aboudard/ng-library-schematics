@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@aboudard/ng-lib": [
+        "dist/aboudard/ng-lib/aboudard-ng-lib",
+        "dist/aboudard/ng-lib"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
