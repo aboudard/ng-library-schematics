@@ -6,6 +6,12 @@
     "start": "ng serve sandbox",
     "build": "ng build sandbox",
     "build:lib": "ng build @aboudard/ng-lib",
+    "build:schematics": "tsc -p projects/aboudard/ng-lib/tsconfig.schematics.json",
+    "postbuild:schematics": "copyfiles projects/aboudard/ng-lib/schematics/collection.json dist/aboudard/ng-lib/schematics/ -f",
+    "build:all": "npm run build:lib && npm run build:schematics",
+    "pack:lib": "cd dist/aboudard/ng-lib && npm pack",
+    "lib:all": "npm run build:all && npm run pack:lib",
+    "publish:all": "npm run lib:all && npm publish dist/aboudard/ng-lib",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
