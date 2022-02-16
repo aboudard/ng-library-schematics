@@ -13,6 +13,9 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "ng-add": {
+    "save": "dependencies"
+  },
   "devDependencies": {
     "copyfiles": "file:../../node_modules/copyfiles",
     "typescript": "file:../../node_modules/typescript"
