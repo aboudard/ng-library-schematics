@@ -1,6 +1,6 @@
 {
   "name": "@aboudard/ng-lib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular schematics for library",
   "repository": {
     "type": "git",
@@ -12,8 +12,9 @@
   "homepage": "https://github.com/aboudard/ng-library-schematics",
   "schematics": "./schematics/collection.json",
   "scripts": {
+    "build:sass": "sass src/styles:src/styles",
     "build": "tsc -p tsconfig.schematics.json",
-    "postbuild": "copyfiles schematics/collection.json ../../../dist/aboudard/ng-lib/"
+    "postbuild": "copyfiles src/styles/*.css schematics/collection.json ../../../dist/aboudard/ng-lib/"
   },
   "keywords": [
     "schematics",

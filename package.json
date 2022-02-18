@@ -7,8 +7,10 @@
     "build": "ng build sandbox",
     "build:lib": "ng build @aboudard/ng-lib",
     "build:schematics": "tsc -p projects/aboudard/ng-lib/tsconfig.schematics.json",
+    "build:sass": "sass projects/aboudard/ng-lib/src/styles",
+    "postbuild:sass": "copyfiles projects/aboudard/ng-lib/src/styles/*.* dist/aboudard/ng-lib/styles/ -f",
     "postbuild:schematics": "copyfiles projects/aboudard/ng-lib/schematics/collection.json dist/aboudard/ng-lib/schematics/ -f",
-    "build:all": "npm run build:lib && npm run build:schematics",
+    "build:all": "npm run build:lib && npm run build:schematics && npm run build:sass",
     "pack:lib": "cd dist/aboudard/ng-lib && npm pack",
     "lib:all": "npm run build:all && npm run pack:lib",
     "publish:all": "npm run lib:all && npm publish dist/aboudard/ng-lib",
@@ -42,6 +44,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^13.0.0",
+    "sass": "^1.49.8",
     "typescript": "~4.5.2"
   }
 }
