@@ -3,5 +3,8 @@
   "dest": "../../../dist/aboudard/ng-lib",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    "./styles/*.*"
+  ]
 }

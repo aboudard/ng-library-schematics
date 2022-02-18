@@ -12,9 +12,12 @@
   "homepage": "https://github.com/aboudard/ng-library-schematics",
   "schematics": "./schematics/collection.json",
   "scripts": {
-    "build:sass": "sass src/styles:src/styles",
-    "build": "tsc -p tsconfig.schematics.json",
-    "postbuild": "copyfiles src/styles/*.css schematics/collection.json ../../../dist/aboudard/ng-lib/"
+    "build:sass": "sass styles",
+    "build:schematics": "tsc -p tsconfig.schematics.json",
+    "postbuild:schematics": "copyfiles schematics/collection.json ../../../dist/aboudard/ng-lib/"
+  },
+  "exports": {
+    "./styles": { "default": "./styles/styles.scss" }
   },
   "keywords": [
     "schematics",
