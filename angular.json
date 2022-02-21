@@ -59,7 +59,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/sandbox/src/favicon.ico",
-              "projects/sandbox/src/assets"
+              "projects/sandbox/src/assets",
+              {
+                "glob": "**/*",
+                "input": "dist/aboudard/ng-lib/assets",
+                "output": "assets"
+              }
             ],
             "styles": [
               "projects/sandbox/src/styles.scss"

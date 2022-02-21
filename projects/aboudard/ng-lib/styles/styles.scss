@@ -1,8 +1,12 @@
+@use "../assets/theme.css";
+
+@import "_variables";
+
 .test-lib {
     .border {
         border: 1px solid #ccc;
         border-radius: 5px;
-        padding: 0.2rem 0.8rem;
+        padding: $sm;
         background: lavender;
     }
 }
