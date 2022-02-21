@@ -7,7 +7,7 @@
     "build": "ng build sandbox",
     "build:lib": "ng build @aboudard/ng-lib",
     "build:schematics": "tsc -p projects/aboudard/ng-lib/tsconfig.schematics.json",
-    "build:sass": "sass projects/aboudard/ng-lib/styles",
+    "build:sass": "sass projects/aboudard/ng-lib/styles/styles.scss projects/aboudard/ng-lib/assets/styles.css",
     "postbuild:schematics": "copyfiles projects/aboudard/ng-lib/schematics/collection.json dist/aboudard/ng-lib/schematics/ -f",
     "build:all": "npm run build:lib && npm run build:schematics && npm run build:sass",
     "pack:lib": "cd dist/aboudard/ng-lib && npm pack",
