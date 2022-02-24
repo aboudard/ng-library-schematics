@@ -11,6 +11,9 @@
   },
   "homepage": "https://github.com/aboudard/ng-library-schematics",
   "schematics": "./schematics/collection.json",
+  "ng-update": {
+    "migrations": "./schematics/migrations.json"
+  },
   "scripts": {
     "build:sass": "sass styles/styles.scss assets/styles.css",
     "build:schematics": "tsc -p tsconfig.schematics.json",
