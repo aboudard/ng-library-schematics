@@ -19,6 +19,7 @@
     "pack:lib": "cd dist/aboudard/ng-lib && npm pack",
     "lib:all": "npm run build:all && npm run pack:lib",
     "publish:all": "npm run lib:all && npm publish dist/aboudard/ng-lib",
+    "publish:local": "npm run lib:all && npm publish dist/aboudard/ng-lib --registry http://localhost:4873",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -44,6 +45,7 @@
     "@angular/compiler-cli": "~13.2.4",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "copyfiles": "^2.4.1",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
